@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<title>Game Loot</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="basic.css">
+<style type="text/css">
+a{
+    text-decoration: none;
+    color: white;
+}
+.header1{
+	background-color: #71ad19;
+}
+
+#button{
+	width: 130px;
+	margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+#h2{
+    border-bottom: solid 2px #558213;
+    height: 88px;
+    background-color: #558213;
+} 
+#reward{
+    margin-top: 21px;
+    border: solid 1px #558213;
+    border-radius: 15px;
+    width: 32%;
+    margin-left: 5px;
+    float: left;
+    background-color: #558213;
+    height: 360px;
+} 
+.wrapper{
+    overflow:hidden; 
+    margin-bottom:10px;
+}
+.pic{
+    /*background-color: #e3ef15;*/
+    border: 1px solid black;
+    margin: 0px 7px 5px 7px;
+    height: 175px;
+    border-radius: 15px;
+}
+#buy{
+    padding: 10px 30px 10px 30px;
+    background-color: #263a09;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+/* responsiveness */
+@media screen and (min-width: 320px) and (max-width : 450px){
+.wrapper {
+    overflow: visible !important;
+}
+#reward {
+    width: 48% !important;
+}
+}
+@media screen and (min-width: 451px) and (max-width : 650px){
+.wrapper {
+    overflow: visible !important;
+}
+#reward {
+    width: 50% !important;
+    margin-left: 110px !important;
+}
+}
+@media screen and (min-width: 651px) and (max-width : 800px){
+#reward{
+    width: 46%;
+}
+}
+.alert-success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert {
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+</style>
+
+<body style="background-color:#71ad19;">
+
+    <div class="w3-container w3-card-2 header1">
+      <div class="w3-left">
+        <a href="#"><img src="backicon.png" class="w3-image w3-center" style="margin-top: 25px;" alt="back" ></a>
+      </div>    
+      <div class="w3-center">
+        <h2 style="color:white;">Store</h2>
+      </div>
+      <div class="w3-right">
+
+      </div>    
+    </div>
+    <div class="w3-container" id="h2">
+        <div class="w3-left">
+         <h4 style="color:white;">User Name</h4>
+         <h4 style="color:white;">ID: 99.999</h4>
+      </div>    
+      <div class="w3-right">
+        <h4 style="color:white;">Balance</h4>
+         <h4 style="color:white;">99.999.999</h4>
+      </div>
+    </div> 
+    <div class="w3-container">
+        <p><div class="w3-row ">
+                <div class="w3-col l6 s6 m6">
+                    <div class="alert alert-success w3-left">
+                        <strong>Success!</strong> This alert box indicates a successful or positive action.
+                    </div>
+                </div>
+            </div></p>
+        <p><div class="w3-row ">
+                <div class="w3-col l6 s6 m6">           
+                    <div class="alert alert-danger w3-left">
+                        <strong>Danger!</strong> This alert box indicates a negative action.
+                    </div>
+                </div>
+            </div></p>      
+    </div>
+    <div class="wrapper">
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">5 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens1.png" alt="tokens" width="100%" height="100%">
+                </div> 
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$0.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div>  
+            </div>
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">25 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens2.png" alt="tokens" width="100%" height="100%">
+                </div> 
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$4.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div> 
+            </div>
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">50 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens3.png" alt="tokens" width="100%" height="100%">
+                </div>
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$9.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div>  
+            </div>
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">100 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens4.png" alt="tokens" width="100%" height="100%">
+                </div> 
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$19.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div>  
+            </div>
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">250 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens5.png" alt="tokens" width="100%" height="100%">
+                </div> 
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$39.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div> 
+            </div>
+            <div id="reward">
+                <h3 class="w3-center" style="color:#d5e710;">500 Tokens</h3>
+                <div class="pic">
+                    <img src="tokens6.png" alt="tokens" width="100%" height="100%">
+                </div>
+                <p class="w3-center" style="color:white;font-size:25px;font-weight:bold;">$99.99</p>
+                <div class="w3-row w3-center"><a href="#" id="buy">buy</a></div>  
+            </div>
+        </div>    
+        
+       
+</body>
+</html>    
