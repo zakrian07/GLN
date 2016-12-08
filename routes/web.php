@@ -30,11 +30,15 @@ Route::group(['middleware' => 'auth'], function(){
     //category links rout
     Route::get('/categories/viewGames/{categoryId}','categoryController@gamesByCategory')->name('gameByCategory');
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     //member Links rout
     Route::get('/members/edit_member/{memberId}','membersController@editMember')->name("editMember");
     
     Route::get('/members/delete/{memberId}',function($memberId){
+<<<<<<< HEAD
         DB::table('members')->where('id', $memberId)->delete();    
            return redirect()->route('members');
     })->name('deleteMember');
@@ -55,6 +59,12 @@ Route::group(['middleware' => 'auth'], function(){
         return redirect()->route('members');
     })->name('addMember');
 
+=======
+            DB::table('members')->where('id', $memberId)->delete();
+            return "Member has been deleted";
+    })->name('deleteMember');
+    
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     Route::post('/members/update',function(){
         
      DB::table('members')
@@ -67,7 +77,11 @@ Route::group(['middleware' => 'auth'], function(){
                             'phone'=>$_POST["phone"],
                             'country'=>$_POST["country"]
                 ));
+<<<<<<< HEAD
             return redirect()->route('members');
+=======
+            return view('Dashboard.home');
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     })->name('update');
    
     // added languages crud routes

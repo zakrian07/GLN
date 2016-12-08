@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  <meta name="csrf-token" content="{{ csrf_token() }}">
 
+<<<<<<< HEAD
 <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -29,10 +30,28 @@
     <script src="/custom.js"></script>
 
 
+=======
+
+
+ <script src="assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+ <!-- Bootstrap Core JavaScript -->
+
+  <!-- Scripts -->
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+    <script src="/js/Chart.js"></script>
+ <!-- Bootstrap Core CSS -->
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
  <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+<<<<<<< HEAD
     <!--Toastr css-->
     <link href="/css/toastr.min.css" rel="stylesheet">
     <!-- Theme style -->
@@ -48,6 +67,21 @@
     <link rel="stylesheet" href="/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
     <link rel="stylesheet" href="/assets/plugins/datepicker/datepicker3.css">
+=======
+    <!-- Theme style -->
+    <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="assets/plugins/iCheck/flat/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="assets/plugins/datepicker/datepicker3.css">
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     <!-- Daterange picker -->
     <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker-bs3.css">
     <link href="assets/plugins/sweet-alert/sweet-alert.css" rel="stylesheet" type="text/css" />
@@ -55,7 +89,11 @@
     <!-- Fancy Box-->
     <link href="assets/plugins/fancy-box-2.1.5/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap wysihtml5 - text editor -->
+<<<<<<< HEAD
     <!--<link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">-->
+=======
+    <link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     
 <link href="/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
 <!-- Custom CSS -->
@@ -73,6 +111,7 @@
 
 <!-- //chart -->
 <!--animate-->
+<<<<<<< HEAD
     <link href="/css/animate.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/page_loader.css" rel="stylesheet" type="text/css" media="all">
     <link href="/css/overlay.css" rel="stylesheet" type="text/css" media="all">
@@ -80,6 +119,19 @@
     <link href='/css/fonts2.css' rel='stylesheet' type='text/css'>
 
     
+=======
+<link href="/css/animate.css" rel="stylesheet" type="text/css" media="all">
+<link href="/css/overlay.css" rel="stylesheet" type="text/css" media="all">
+<link href="/css/page_loader.css" rel="stylesheet" type="text/css" media="all">
+<script src="/js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<link href='/css/fonts2.css' rel='stylesheet' type='text/css'>
+
+@stack('styles')
+
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 </head> 
    
  <body class="sticky-header left-side-collapsed">
@@ -153,6 +205,10 @@
 										<!-- search-scripts -->
 										<script src="/js/classie.js"></script>
 										<script src="/js/uisearch.js"></script>
+<<<<<<< HEAD
+=======
+										   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 											<script>
 												new UISearch( document.getElementById( 'sb-search' ) );
 											</script>
@@ -236,6 +292,19 @@
       <!-- main content end-->
    </section>
    
+<<<<<<< HEAD
+=======
+ <script src="/js/jquery.nicescroll.js"></script>
+<script src="/js/scripts.js"></script>
+
+ <script src="/js/overlay.js"></script>
+
+   <script src="/js/moment.js"></script>
+   <script src="/js/bootstrap-datepicker.js"></script>
+   <link href="/css/toastr.min.css" rel="stylesheet">
+  
+    <script src="/js/toastr.min.js"></script>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
     {!! Toastr::render() !!}
 
 <script type="text/javascript">
@@ -244,7 +313,23 @@ $(window).load(function() {
 })
 </script>
  
+<<<<<<< HEAD
 @stack('scripts')
+=======
+    <script src="assets/magnific.min.js"></script>
+ 
+    <!-- jquery sweet alert plugin-->
+    <script type="text/javascript" src="assets/plugins/sweet-alert/sweet-alert.js"></script>
+     <!-- Fancy Box -->
+<script src="custom.js"></script>
+    <script src="assets/plugins/fancy-box-2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
+    <!-- AdminLTE App -->
+  
+    
+   <script src="assets/dist/js/app.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 
 <!--<script src="/js/typehead.js"></script>-->
 

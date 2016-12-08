@@ -67,7 +67,11 @@
 	              	<tr>
                         <th>Deep Link</th>
                         <td>
+<<<<<<< HEAD
                             <a href="{{ $row->deep_link }}" target="_blank">{{ $row->deep_link }}</a>
+=======
+                            <a href="{{ $row->download_link }}" target="_blank">{{ $row->download_link }}</a>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
                         </td>
                     </tr>
 	              	<tr>
@@ -83,6 +87,7 @@
                 </div>
             </div> 
      </section>
+<<<<<<< HEAD
 @endsection
 
 @push('styles')
@@ -123,3 +128,6 @@ $(window).load(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="/js/typehead.js"></script>
 @endpush
+=======
+@endsection
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23

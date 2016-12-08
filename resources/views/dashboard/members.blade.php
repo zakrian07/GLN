@@ -1,5 +1,13 @@
 @extends('layouts.appLayout')
 
+<<<<<<< HEAD
+=======
+@push('styles')
+
+  <script src="assets/scripts/jquery-ui.js"></script>
+
+@endpush
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 @section('content')
 <section class="content-header">
   <h1>
@@ -24,7 +32,11 @@
                 <button class="btn btn-success pull-right show-hide-form" >Add User</button>
             </div>
             
+<<<<<<< HEAD
             <form action="{{ route('addMember') }}" role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
+=======
+            <form role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
                 <div class="box-body">
                     <div class="form-group">
                     	<div class="row">
@@ -62,7 +74,11 @@
                               <label for="uname">Username</label>
                           </div>
                           <div class="col-md-10">
+<<<<<<< HEAD
                             <input type="text" class="form-control" name="uname" placeholder="Username" required="required">
+=======
+                            <input type="text" class="form-control" name="user_name" placeholder="Username" required="required">
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
                           </div>
                       </div>    
                     </div>
@@ -186,7 +202,11 @@
 			<tbody>
 	 	@foreach($members as $listItem)							
 				<tr class="unread checked">
+<<<<<<< HEAD
 					<td  style="text-align:center;" class="hidden-xs">
+=======
+					<td id="memberId" style="text-align:center;" class="hidden-xs">
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 						{{ $listItem->imatrix_id }}
 					</td>
 					<td style="text-align:center;" class="hidden-xs">
@@ -208,15 +228,23 @@
 						<a href="{{ route('editMember',$listItem->id) }}" data-action="edit" data-item-type="users" data-id="12215" class="btn btn-success btn-sm" data-toggle="tooltip" data-original-title="Edit">
 							<i class="fa fa-pencil fa-lg"></i>
 						</a>&nbsp;
+<<<<<<< HEAD
 	                    <a href="{{ route('deleteMember', $listItem->id) }}" class="btn btn-danger btn-sm"  ><i class="fa fa-trash-o fa-lg"></i></a>
 	                </td>
 				</tr>					
 	 
   	    @endforeach
+=======
+	                    <a href="" class="btn btn-danger btn-sm"  ><i class="fa fa-trash-o fa-lg"></i></a>
+	                </td>
+				</tr>					
+		    @endforeach
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 		    </tbody>
 			</table>
 		</div>
 	</div>
+<<<<<<< HEAD
   
 
 @endsection()
@@ -260,3 +288,26 @@ $(window).load(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="/js/typehead.js"></script>
 @endpush
+=======
+  <script type="text/javascript">
+  console.log("event called");
+     
+      $('.btn-danger').click(function() {
+
+    var memberId=$("#memberId").find(".unread").val();
+
+    console.log("memberId",memberId);
+
+    $.ajax({
+        url: "{{ route('deleteMember' ," + memberId + ")  }}",
+        type: 'get',
+        success: function( msg ) {
+              
+            }
+        });
+       
+    });
+
+  </script>
+@endsection()
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23

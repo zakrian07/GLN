@@ -120,6 +120,7 @@
 			</div>		
 	    </div>            
 	</section>
+<<<<<<< HEAD
 @endsection()
 
 @push('styles')
@@ -160,3 +161,6 @@ $(window).load(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="/js/typehead.js"></script>
 @endpush
+=======
+@endsection()
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23

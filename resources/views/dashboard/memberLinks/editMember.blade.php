@@ -11,8 +11,15 @@
 				<div class="form-group">
 					<label class="col-md-2 control-label">First Name</label>
 					<div class="col-md-10">
+<<<<<<< HEAD
 						<div class="input-group">							
 							
+=======
+						<div class="input-group in-grp1">							
+							<span class="input-group-addon">
+								<i class="fa fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input type="text" name='fname' value="{{ $row->first_name }}" class="form-control" placeholder="First Name"/>
 						</div>
 					</div>
@@ -22,7 +29,13 @@
 					<label class="col-md-2 control-label">Last Name</label>
 					<div class="col-md-10">
 						<div class="input-group in-grp1">
+<<<<<<< HEAD
 							
+=======
+							<span class="input-group-addon">
+								<i class="fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input type="text" name="lname" value="{{ $row->last_name }}" class="form-control" id="exampleInputPassword1" placeholder="">
 						</div>
 					</div>
@@ -32,7 +45,13 @@
 					<label class="col-md-2 control-label">Email</label>
 					<div class="col-md-10">
 						<div class="input-group input-icon right in-grp1">
+<<<<<<< HEAD
 							
+=======
+							<span class="input-group-addon">
+								<i class="fa fa-envelope-o"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input id="email" name="email" value="{{ $row->email }}" class="form-control" type="text" placeholder="Email Address">
 						</div>
 					</div>
@@ -41,7 +60,14 @@
 				<div class="form-group">
 					<label class="col-md-2 control-label">Username</label>
 					<div class="col-md-10">
+<<<<<<< HEAD
 						<div class="input-group ">
+=======
+						<div class="input-group input-icon right in-grp1">
+							<span class="input-group-addon">
+								<i class="fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input type="text" name="uname" value="{{ $row->user_name }}" class="form-control" placeholder="">
 						</div>
 					</div>
@@ -50,7 +76,14 @@
 				<div class="form-group">
 					<label class="col-md-2 control-label">Country</label>
 					<div class="col-md-10">
+<<<<<<< HEAD
 						<div class="input-group input-icon ">
+=======
+						<div class="input-group input-icon right in-grp1">
+							<span class="input-group-addon">
+								<i class="fa fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input id="email" name="country" value="{{ $row->country }}" class="form-control1" type="text" >
 						</div>
 					</div>
@@ -59,8 +92,15 @@
 				<div class="form-group">
 					<label class="col-md-2 control-label">Phone</label>
 					<div class="col-md-10">
+<<<<<<< HEAD
 						<div class="input-group">
 							
+=======
+						<div class="input-group input-icon right in-grp1">
+							<span class="input-group-addon">
+								<i class="fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input type="text" name="phone" value="{{ $row->phone }}" class="form-control1" placeholder="">
 						</div>
 					</div>
@@ -70,8 +110,15 @@
 				<div class="form-group">
 					<label class="col-md-2 control-label">Imatrix Id</label>
 					<div class="col-md-10">
+<<<<<<< HEAD
 						<div class="input-group ">
 							
+=======
+						<div class="input-group input-icon right in-grp1">
+							<span class="input-group-addon">
+								<i class="fa"></i>
+							</span>
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 							<input type="text" name="imatrix" value="{{ $row->imatrix_id }}" class="form-control1" placeholder="">
 						</div>
 					</div>
@@ -85,6 +132,7 @@
 		</form>
 
 	</div>
+<<<<<<< HEAD
 @endsection()
 
 @push('styles')
@@ -125,3 +173,6 @@ $(window).load(function() {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
 <script src="/js/typehead.js"></script>
 @endpush
+=======
+@endsection()
+>>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
