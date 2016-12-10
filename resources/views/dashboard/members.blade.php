@@ -1,13 +1,4 @@
 @extends('layouts.appLayout')
-
-<<<<<<< HEAD
-=======
-@push('styles')
-
-  <script src="assets/scripts/jquery-ui.js"></script>
-
-@endpush
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
 @section('content')
 <section class="content-header">
   <h1>
@@ -32,11 +23,8 @@
                 <button class="btn btn-success pull-right show-hide-form" >Add User</button>
             </div>
             
-<<<<<<< HEAD
             <form action="{{ route('addMember') }}" role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
-=======
-            <form role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
+         <form role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="form-group">
                     	<div class="row">
@@ -74,11 +62,8 @@
                               <label for="uname">Username</label>
                           </div>
                           <div class="col-md-10">
-<<<<<<< HEAD
                             <input type="text" class="form-control" name="uname" placeholder="Username" required="required">
-=======
                             <input type="text" class="form-control" name="user_name" placeholder="Username" required="required">
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
                           </div>
                       </div>    
                     </div>
@@ -174,11 +159,11 @@
 
 		<div class="box-body table-responsive no-padding">
 		 	<table id="user_table" class="table table-fhr table-responsive table-hover">
-	 		<thead>
-	 			<tr class="unread checked">
-					<th style="text-align:center" class="hidden-xs">
+	 		  <thead>
+	 			  <tr class="unread checked">
+				  	<th style="text-align:center" class="hidden-xs">
 						Imatrix ID
-					</th>
+					 </th>
 					<th style="text-align:center" class="hidden-xs">
 						First Name
 					</th>
@@ -202,11 +187,8 @@
 			<tbody>
 	 	@foreach($members as $listItem)							
 				<tr class="unread checked">
-<<<<<<< HEAD
-					<td  style="text-align:center;" class="hidden-xs">
-=======
-					<td id="memberId" style="text-align:center;" class="hidden-xs">
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
+					 					
+          <td id="memberId" style="text-align:center;" class="hidden-xs">
 						{{ $listItem->imatrix_id }}
 					</td>
 					<td style="text-align:center;" class="hidden-xs">
@@ -228,86 +210,14 @@
 						<a href="{{ route('editMember',$listItem->id) }}" data-action="edit" data-item-type="users" data-id="12215" class="btn btn-success btn-sm" data-toggle="tooltip" data-original-title="Edit">
 							<i class="fa fa-pencil fa-lg"></i>
 						</a>&nbsp;
-<<<<<<< HEAD
 	                    <a href="{{ route('deleteMember', $listItem->id) }}" class="btn btn-danger btn-sm"  ><i class="fa fa-trash-o fa-lg"></i></a>
-	                </td>
-				</tr>					
-	 
-  	    @endforeach
-=======
-	                    <a href="" class="btn btn-danger btn-sm"  ><i class="fa fa-trash-o fa-lg"></i></a>
-	                </td>
-				</tr>					
-		    @endforeach
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
+	         </td>
+	
+				  </tr>					
+		      @endforeach
 		    </tbody>
 			</table>
 		</div>
 	</div>
-<<<<<<< HEAD
-  
 
 @endsection()
-
-@push('styles')
-<!-- Fancy Box -->
-    <script src="assets/plugins/fancy-box-2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="js/Chart.js"></script>
-<script src="js/wow.min.js"></script>
-    <script src="assets/magnific.min.js"></script>
-       <!-- jquery sweet alert plugin-->
-    <script type="text/javascript" src="assets/plugins/sweet-alert/sweet-alert.js"></script>
-     
-    <!-- AdminLTE App -->
-    <script src="assets/dist/js/app.min.js"></script>
-  
-@endpush
-
-@push('scripts')
-
- <script src="/js/overlay.js"></script>
-<!-- Bootstrap Core JavaScript -->
-      <script src="/js/toastr.min.js"></script>   
-   <script src="/js/moment.js"></script>
-   <script src="/js/bootstrap-datepicker.js"></script>
-   
-  
-<script src="/js/jquery.nicescroll.js"></script>
-<script src="/js/scripts.js"></script>
-
-
-    {!! Toastr::render() !!}
-
- <!--<script src="js/bootstrap.min.js"></script>-->
-<script type="text/javascript">
-$(window).load(function() {
-  $(".loader").fadeOut("slow");
-})
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
-<script src="/js/typehead.js"></script>
-@endpush
-=======
-  <script type="text/javascript">
-  console.log("event called");
-     
-      $('.btn-danger').click(function() {
-
-    var memberId=$("#memberId").find(".unread").val();
-
-    console.log("memberId",memberId);
-
-    $.ajax({
-        url: "{{ route('deleteMember' ," + memberId + ")  }}",
-        type: 'get',
-        success: function( msg ) {
-              
-            }
-        });
-       
-    });
-
-  </script>
-@endsection()
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23

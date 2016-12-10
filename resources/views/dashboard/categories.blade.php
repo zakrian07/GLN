@@ -97,10 +97,10 @@
 							{{ $categoryItem->category }}
 						</td>
 						<td style="text-align:center" class="hidden-xs">
-							<a href="edit_user.php?user_id=12215" data-action="edit" data-item-type="users" data-id="12215" class="btn btn-success btn-sm" data-toggle="tooltip" data-original-title="Edit">
+							<a href="{{ route('editCategory',$categoryItem->cid) }}" data-action="edit" data-item-type="users" data-id="12215" class="btn btn-success btn-sm" data-toggle="tooltip" data-original-title="Edit">
 								<i class="fa fa-pencil fa-lg"></i>
 							</a>&nbsp;
-		                    <a href="" data-action="delete" data-action-type="User" data-id="12215" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">
+		                    <a href="{{ route('deleteCategory',$categoryItem->cid)}}"  class="btn btn-danger btn-sm">
 		                    	<i class="fa fa-trash-o fa-lg"></i>
 		                    </a>
 						</td>
@@ -115,47 +115,4 @@
 	</div>
 	</div>
 	</div>
-<<<<<<< HEAD
 @endsection()
-
-@push('styles')
-<!-- Fancy Box -->
-    <script src="assets/plugins/fancy-box-2.1.5/jquery.fancybox.pack.js" type="text/javascript"></script>
-<script src="js/Chart.js"></script>
-<script src="js/wow.min.js"></script>
-    <script src="assets/magnific.min.js"></script>
-       <!-- jquery sweet alert plugin-->
-    <script type="text/javascript" src="assets/plugins/sweet-alert/sweet-alert.js"></script>
-     
-    <!-- AdminLTE App -->
-    <script src="assets/dist/js/app.min.js"></script>
-  
-@endpush
-
-@push('scripts')
-
- <script src="/js/overlay.js"></script>
-<!-- Bootstrap Core JavaScript -->
-   <script src="/js/bootstrap.min.js"></script>
-   <script src="/js/moment.js"></script>
-   <script src="/js/bootstrap-datepicker.js"></script>
-   <link href="/css/toastr.min.css" rel="stylesheet">
-  
-<script src="/js/jquery.nicescroll.js"></script>
-<script src="/js/scripts.js"></script>
-
-    <script src="/js/toastr.min.js"></script>
-    {!! Toastr::render() !!}
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
- <!--<script src="js/bootstrap.min.js"></script>-->
-<script type="text/javascript">
-$(window).load(function() {
-  $(".loader").fadeOut("slow");
-})
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
-<script src="/js/typehead.js"></script>
-@endpush
-=======
-@endsection()
->>>>>>> 781fed86929c1fc2c3a1234b9f36203e0edfaf23
