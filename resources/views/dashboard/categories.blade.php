@@ -63,6 +63,22 @@
                 </div><!-- /.box-header --><br>
 
 		<div class="box-body table-responsive no-padding">
+    @if(Session::has('message'))
+                      <div class="alert alert-success">
+                  <ul>
+                
+                {{ Session::get('message') }}
+                
+                  </ul>
+                      </div>
+        @endif
+         @if (count($errors) > 0)
+              <div class="alert alert-danger" role="alert">
+                @foreach ($errors->all() as $error)
+                    <strong>{{ $error }}</strong>  <br> 
+                 @endforeach
+                                  
+          @endif
 		 	<table id="user_table" class="table table-fhr table-responsive table-hover">
 		 		<thead>
 		 			<tr class="unread checked">

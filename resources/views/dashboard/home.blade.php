@@ -8,9 +8,9 @@
 							<div class="r3_counter_box">
 								<i class="fa fa-mail-forward"></i>
 								<div class="stats">
-								  <h5>45 <span>%</span></h5>
+								  <h5>{{ $allScreen }}</h5>
 								  <div class="grow">
-									<p>Growth</p>
+									<p>Screens</p>
 								  </div>
 								</div>
 							</div>
@@ -19,9 +19,9 @@
 							<div class="r3_counter_box">
 								<i class="fa fa-users"></i>
 								<div class="stats">
-								  <h5>50 <span>%</span></h5>
+								  <h5>{{ $allmem }}</h5>
 								  <div class="grow grow1">
-									<p>New Users</p>
+									<p>Users</p>
 								  </div>
 								</div>
 							</div>
@@ -30,9 +30,9 @@
 							<div class="r3_counter_box">
 								<i class="fa fa-eye"></i>
 								<div class="stats">
-								  <h5>70 <span>%</span></h5>
+								  <h5>{{ $allgame }}</h5>
 								  <div class="grow grow3">
-									<p>Visitors</p>
+									<p>Games</p>
 								  </div>
 								</div>
 							</div>
@@ -41,9 +41,9 @@
 							<div class="r3_counter_box">
 								<i class="fa fa-usd"></i>
 								<div class="stats">
-								  <h5>70 <span>%</span></h5>
+								  <h5>{{ $allcat }}</h5>
 								  <div class="grow grow2">
-									<p>Profit</p>
+									<p>Categoies</p>
 								  </div>
 								</div>
 							</div>
@@ -58,11 +58,11 @@
 					<div class="switch-right-grid">
 						<div class="switch-right-grid1">
 							<h3>TODAY'S STATS</h3>
-							<p>Duis aute irure dolor in reprehenderit.</p>
+							
 							<ul>
-								<li>Earning: $400 USD</li>
-								<li>Items Sold: 20 Items</li>
-								<li>Last Hour Sales: $34 USD</li>
+								<li>Members: {{ $membersToday }}</li>
+								<li>Games: {{ $gamesToday }}</li>
+								
 							</ul>
 						</div>
 					</div>
@@ -89,12 +89,11 @@
 				<div class="col-md-4 switch-right">
 					<div class="switch-right-grid">
 						<div class="switch-right-grid1">
-							<h3>MONTHLY STATS</h3>
-							<p>Duis aute irure dolor in reprehenderit.</p>
+							<h3>WEEKLY STATS</h3>
+					
 							<ul>
-								<li>Earning: $5,000 USD</li>
-								<li>Items Sold: 400 Items</li>
-								<li>Last Hour Sales: $2,434 USD</li>
+								<li>Members: {{ $weeklyMembers }}</li>
+								<li>Games: {{ $weeklyGames }}</li>
 							</ul>
 						</div>
 					</div>
@@ -124,12 +123,11 @@
 				<div class="col-md-4 switch-right">
 					<div class="switch-right-grid">
 						<div class="switch-right-grid1">
-							<h3>ALLTIME STATS</h3>
-							<p>Duis aute irure dolor in reprehenderit.</p>
+							<h3>MONTHLY STATS</h3>
+						
 							<ul>
-								<li>Earning: $80,000 USD</li>
-								<li>Items Sold: 8,000 Items</li>
-								<li>Last Hour Sales: $75,434 USD</li>
+								<li>Members: {{ $monthlyMembers }}</li>
+								<li>Games: {{ $monthlyGames }}</li>
 							</ul>
 						</div>
 					</div>
@@ -213,168 +211,67 @@
 		<div class="col_1">
 			<div class="col-md-4 span_8">
 				<div class="activity_box">
-					<h3>Inbox</h3>
+					<h3>Latest Users</h3>
 					<div class="scrollbar scrollbar1" id="style-2">
+						@foreach($members as $member)
 						<div class="activity-row">
-							<div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
-							<div class="col-xs-7 activity-desc">
-								<h5><a href="#">John Smith</a></h5>
-								<p>Hey ! There I'm available.</p>
+						
+							<div class="col-xs-9 activity-desc">
+								<h5><a href="#">{{ $member->first_name }} {{ $member->last_name }}</a></h5>
+								<p>{{ $member->user_name }} : {{ $member->email }}</p>
 							</div>
-							<div class="col-xs-2 activity-desc1"><h6>13:40 PM</h6></div>
+							<div class="col-xs-3 activity-img"><span>{{ $member->created_date }}</span></div>
 							<div class="clearfix"> </div>
 						</div>
-						<div class="activity-row">
-							<div class="col-xs-3 activity-img"><img src='images/5.png' class="img-responsive" alt=""/></div>
-							<div class="col-xs-7 activity-desc">
-								<h5><a href="#">Andrew Jos</a></h5>
-								<p>Hey ! There I'm available.</p>
-							</div>
-							<div class="col-xs-2 activity-desc1"><h6>13:40 PM</h6></div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="activity-row">
-							<div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/></div>
-							<div class="col-xs-7 activity-desc">
-								<h5><a href="#">Adom Smith</a></h5>
-								<p>Hey ! There I'm available.</p>
-							</div>
-							<div class="col-xs-2 activity-desc1"><h6>13:40 PM</h6></div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="activity-row">
-							<div class="col-xs-3 activity-img"><img src='images/4.png' class="img-responsive" alt=""/></div>
-							<div class="col-xs-7 activity-desc">
-								<h5><a href="#">Peter Carl</a></h5>
-								<p>Hey ! There I'm available.</p>
-							</div>
-							<div class="col-xs-2 activity-desc1"><h6>13:40 PM</h6></div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="activity-row">
-							<div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/></div>
-							<div class="col-xs-7 activity-desc">
-								<h5><a href="#">John Smith</a></h5>
-								<p>Hey ! There I'm available.</p>
-							</div>
-							<div class="col-xs-2 activity-desc1"><h6>13:40 PM</h6></div>
-							<div class="clearfix"> </div>
-						</div>
+						@endforeach
 					</div>
 				</div>
 			</div>
+
 			<div class="col-md-4 span_8">
 				<div class="activity_box activity_box1">
-					<h3>chat</h3>
+					<h3>Latest Games</h3>
 					<div class="scrollbar" id="style-2">
-						<div class="activity-row activity-row1">
-							<div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
-							<div class="col-xs-5 activity-img1">
-								<div class="activity-desc-sub">
-									<h5>John Smith</h5>
-									<p>Hello !</p>
-								</div>
+						@foreach($games as $game)
+						<div class="activity-row">
+						
+							<div class="col-xs-3 activity-img"><img src="{{ URL::asset('/images/game_banners').'/'. $game->game_image }}" class="img-responsive" alt=""/></div>
+							<div class="col-xs-9 activity-desc">
+								<h5><a href="#">{{ $game->name }}</a></h5>
+								<a href="{{ $game->download_link }}">{{ $game->download_link }}</a>
 							</div>
-							<div class="col-xs-4 activity-desc1"></div>
+							
 							<div class="clearfix"> </div>
 						</div>
-						<div class="activity-row activity-row1">
-							<div class="col-xs-2 activity-desc1"></div>
-							<div class="col-xs-7 activity-img2">
-								<div class="activity-desc-sub1">
-									<h5>Adom Smith</h5>
-									<p>Hi,How are you ? What about our next meeting?</p>
-								</div>
-							</div>
-							<div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="activity-row activity-row1">
-							<div class="col-xs-3 activity-img"><img src='images/1.png' class="img-responsive" alt=""/><span>10:00 PM</span></div>
-							<div class="col-xs-5 activity-img1">
-								<div class="activity-desc-sub">
-									<h5>John Smith</h5>
-									<p>Yeah fine</p>
-								</div>
-							</div>
-							<div class="col-xs-4 activity-desc1"></div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="activity-row activity-row1">
-							<div class="col-xs-2 activity-desc1"></div>
-							<div class="col-xs-7 activity-img2">
-								<div class="activity-desc-sub1">
-									<h5>Adom Smith</h5>
-									<p>Wow that's great</p>
-								</div>
-							</div>
-							<div class="col-xs-3 activity-img"><img src='images/3.png' class="img-responsive" alt=""/><span>10:02 PM</span></div>
-							<div class="clearfix"> </div>
-						</div>
+						@endforeach
 					</div>
-					<form>
-						<input type="text" value="Enter your text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your text';}" required="">
-						<input type="submit" value="Send" required=""/>		
-					</form>
+					
 				</div>
 			</div>
+
 			<div class="col-md-4 span_8">
 				<div class="activity_box activity_box2">
-					<h3>todo</h3>
+					<h3>Categories</h3>
 					<div class="scrollbar" id="style-2">
+					@foreach($categories as $category)
 						<div class="activity-row activity-row1">
 							<div class="single-bottom">
 								<ul>
 									<li>
-										<input type="checkbox"  id="brand" value="">
-										<label for="brand"><span></span> Sunt in culpa qui officia.</label>
+										
+										<span class=" activity-img">
+											<img style="float:left" height="50" width="50" src="{{ URL::asset('/images/category_image').'/'. $category->category_image }}" class="img-responsive" alt=""/>
+											<p class="">{{ $category->category }}</p>
+										</span> 
+										
 									</li>
-									<li>
-										<input type="checkbox"  id="brand1" value="">
-										<label for="brand1"><span></span> Fugiat quo voluptas nulla.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand2" value="">
-										<label for="brand2"><span></span> Dolorem eum.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand9" value="">
-										<label for="brand9"><span></span> Pain that produces no resultant.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand8" value="">
-										<label for="brand8"><span></span> Cupidatat non proident.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand7" value="">
-										<label for="brand7"><span></span> Praising pain was born.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand3" value="">
-										<label for="brand3"><span></span> Computer & Electronics</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand4" value="">
-										<label for="brand4"><span></span> Dolorem ipsum quia.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand5" value="">
-										<label for="brand5"><span></span> Consequatur aut perferendis.</label>
-									</li>
-									<li>
-										<input type="checkbox"  id="brand6" value="">
-										<label for="brand6"><span></span> Dolorem ipsum quia.</label>
-									</li>
-									
-									
+
 								</ul>
 							</div>
 						</div>
+						@endforeach
 					</div>
-					<form>
-						<input type="text" value="Enter your text" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your text';}" required="">
-						<input type="submit" value="Submit" required=""/>		
-					</form>
+					
 				</div>
 				<div class="clearfix"> </div>
 			</div>

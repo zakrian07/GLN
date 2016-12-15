@@ -51,6 +51,16 @@
 			<tbody>
 	 	@foreach($games as $gameItem)							
 				<tr style="text-align:center;" class="unread checked">
+					@if(Session::has('message'))
+                      <div class="alert alert-success">
+                  <ul>
+                
+                {{ Session::get('message') }}
+                
+                  </ul>
+                      </div>
+		    @endif
+		     
 					<td class="hidden-xs">
 						<img src="{{ URL::asset('/images/game_banners').'/'. $gameItem->game_image }}" alt="Game Icon" style="height:50px;cursor:pointer;" class="img-rounded category_image">
 					</td>
@@ -58,7 +68,7 @@
 						{{ $gameItem->name }}				
 					</td>
 					<td style="text-align:center;" class="hidden-xs">
-							{{ $games->category }}
+							{{ $gameItem->category }}
 					</td>
 					<td style="text-align:center;" class="hidden-xs">
 						<a href="{{ $gameItem->deep_link }}">{{ $gameItem->deep_link }}</a>

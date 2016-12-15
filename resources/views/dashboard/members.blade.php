@@ -20,99 +20,10 @@
                 </div><!-- /.box-header -->
                 <!-- form start -->
             <div class="box-header with-border"> 
-                <button class="btn btn-success pull-right show-hide-form" >Add User</button>
+                <a href="{{ route('memberForm') }}" class="btn btn-success pull-right show-hide-form" >Add User</a>
             </div>
             
-            <form action="{{ route('addMember') }}" role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
-         <form role="form" method="post" style="display:none" action="" id="add_user" enctype="multipart/form-data">
-                <div class="box-body">
-                    <div class="form-group">
-                    	<div class="row">
-                        	<div class="col-md-2">
-                            	<label for="fname">First Name</label>
-                        	</div>
-                          	<div class="col-md-10">
-                            	<input type="text" class="form-control" name="fname" placeholder="First Name" required="required">
-                        	</div>
-                      	</div>    
-                    </div>
-                    <div class="form-group">
-                    	<div class="row">
-                        	<div class="col-md-2">
-                            	<label for="lname">Last Name</label>
-                        	</div>
-                        	<div class="col-md-10">
-                            	<input type="text" class="form-control" name="lname" placeholder="Last Name" required="required">
-                        	</div>
-                    	</div>    
-                    </div>
-                    <div class="form-group">
-                    	<div class="row">
-                        	<div class="col-md-2">
-                            	<label for="email">Email</label>
-                        	</div>
-                        	<div class="col-md-10">
-                            	<input type="email" class="form-control" name="email" placeholder="Email" required="required">
-                        	</div>
-                      	</div>    
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                          <div class="col-md-2">
-                              <label for="uname">Username</label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" name="uname" placeholder="Username" required="required">
-                            <input type="text" class="form-control" name="user_name" placeholder="Username" required="required">
-                          </div>
-                      </div>    
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                          <div class="col-md-2">
-                              <label for="password">Password</label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="password" pattern=".{6,}" title="6 characters minimum" class="form-control" name="password" placeholder="Password" required="required">
-                          </div>
-                      </div>    
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                          <div class="col-md-2">
-                              <label for="country">Country</label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" name="country" placeholder="Country" required="required">
-                          </div>
-                      </div>    
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                          <div class="col-md-2">
-                              <label for="phone">Phone</label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="number" class="form-control" name="phone" placeholder="Phone" required="required">
-                          </div>
-                      </div>    
-                    </div>
-                    <div class="form-group">
-                      <div class="row">
-                          <div class="col-md-2">
-                              <label for="imatrix">Referrer Imatrix ID</label>
-                          </div>
-                          <div class="col-md-10">
-                            <input type="text" class="form-control" name="imid" placeholder="Referrer Imatrix ID" required="required">
-                          </div>
-                      </div>    
-                    </div>
-                </div><!-- /.box-body -->
-
-                <div class="box-footer">
-                    <button type="submit" id="User" class="btn btn-primary">Submit</button>
-                </div>
-            </form>
+            
         </div><!-- /.box -->
     </div>
 </div>
@@ -153,6 +64,22 @@
           <div class="row">
             <div class="col-xs-12">
 	<div class="box">
+   @if(Session::has('message'))
+                      <div class="alert alert-success">
+                  <ul>
+                
+                {{ Session::get('message') }}
+                
+                  </ul>
+                      </div>
+    @endif
+     @if (count($errors) > 0)
+          <div class="alert alert-danger" role="alert">
+            @foreach ($errors->all() as $error)
+                <strong>{{ $error }}</strong>  <br> 
+             @endforeach
+                              
+      @endif
 		<div class="box-header">
 		        <h3 class="box-title">Users</h3>
 		</div>

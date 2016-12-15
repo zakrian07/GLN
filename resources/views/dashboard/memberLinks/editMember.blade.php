@@ -73,7 +73,7 @@
 				</div>
 			</div>
 			<div class="box-footer" align="center">
-                <input type="submit" class="btn btn-primary" value="submit" name="submit">&nbsp;
+                <input type="submit" class="btn btn-primary" value="Save" name="submit">&nbsp;
     			<a href="{{ route('members')}}" class="btn btn-success">Back</a>            
             </div>
 		</form>

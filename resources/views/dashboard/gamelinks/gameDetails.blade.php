@@ -7,7 +7,8 @@
         </h1>
         <ol class="breadcrumb">
             <li><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-            <li class="active"><strong>Games</strong></li>
+            <li><a href=""><i class="fa fa-dashboard"></i> Game</a></li>
+            <li class="active"><strong>Details</strong></li>
         </ol>
     </section>
 
